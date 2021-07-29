@@ -1,0 +1,12 @@
+package com.kangaroo.wtcoin.data.model.responses
+
+import com.squareup.moshi.JsonClass
+
+/**
+ * 自动生成：by WaTaNaBe on 2021-06-22 15:12.
+ * tokenPost
+ */
+class TokenPostResponse {
+
+   
+}

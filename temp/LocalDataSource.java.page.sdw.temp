@@ -1,0 +1,21 @@
+package com.kangaroo.wtcoin.data.source.local
+
+import com.kangraoo.basektlib.data.DataResult
+import com.kangraoo.basektlib.data.source.local.BaseLocalDataSource
+import com.kangaroo.wtcoin.data.source.AppDataSource
+import com.kangaroo.wtcoin.data.model.params.*
+import com.kangaroo.wtcoin.data.model.responses.*
+import com.qdedu.baselibcommon.data.model.responses.BasicApiResult
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
+
+/**
+ * 自动生成：by WaTaNaBe on 2021-06-22 15:12.
+ * AppLocalDataSource
+ */
+public class AppLocalDataSource internal constructor(
+     private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
+) : BaseLocalDataSource(), AppDataSource {
+
+//#06#
+}

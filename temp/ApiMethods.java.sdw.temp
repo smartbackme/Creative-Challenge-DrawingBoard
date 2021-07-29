@@ -1,0 +1,14 @@
+package com.kangaroo.wtcoin.data.service
+
+object ApiMethods {
+
+
+    /**
+     * 自动生成：by WaTaNaBe on 2021-06-21 16:18.
+     * #tokenPost#
+     * #tokenPost#
+     */
+    const val tokenPost = "s297165331/wtcoin2/token";
+
+//#06#
+}

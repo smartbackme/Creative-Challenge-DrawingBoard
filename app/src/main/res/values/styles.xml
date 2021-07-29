@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="btnJianBianStyle">
+        <item name="lib_gradient_angle">270</item>
+        <item name="lib_gradient_type">linear</item>
+        <item name="lib_gradient_start_color">#2196F3</item>
+        <item name="lib_gradient_end_color">#03A9F4</item>
+    </style>
+    <style name="btnWhiteStyle" >
+        <item name="lib_corners_radius">8dp</item>
+        <item name="lib_pressed_solid_color">#2196F3</item>
+        <item name="lib_unpressed_solid_color">#03A9F4</item>
+        <item name="lib_unenabled_solid_color">#3F51B5</item>
+    </style>
+    <style name="btnJianBianStyle2">
+        <item name="lib_corners_radius">8dp</item>
+        <item name="lib_gradient_angle">270</item>
+        <item name="lib_gradient_type">linear</item>
+        <item name="lib_gradient_start_color">#2196F3</item>
+        <item name="lib_gradient_end_color">#03A9F4</item>
+    </style>
+</resources>

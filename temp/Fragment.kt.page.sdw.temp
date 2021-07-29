@@ -1,0 +1,40 @@
+package com.kangaroo.wtcoin.ui.fragment
+
+import android.content.Context
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.view.View
+import com.gyf.immersionbar.ktx.immersionBar
+import com.kangraoo.basektlib.ui.BActivity
+import com.kangraoo.basektlib.widget.toolsbar.LibToolBarOptions
+import com.kangraoo.basektlib.widget.toolsbar.OnLibToolBarListener
+import com.kangaroo.wtcoin.R
+import com.kangaroo.wtcoin.ui.view.DateView
+import com.kangaroo.wtcoin.ui.presenter.DatePresenter
+import kotlinx.android.synthetic.main.fragment_date.*
+import com.kangraoo.basektlib.ui.mvp.BMvpFragment
+
+/**
+ * 自动生成：by WaTaNaBe on 2021-06-22 15:12
+ * #数据展示#
+ */
+class DateFragment : BMvpFragment<DateView ,DatePresenter>(),DateView{
+
+    companion object{
+
+        @JvmStatic
+        fun newInstance() = DateFragment()
+        
+    }
+
+    override fun getLayoutId() = R.layout.fragment_date
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+    }
+
+    override fun createPresenterInstance(): DatePresenter {
+        return DatePresenter()
+    }
+}

@@ -1,0 +1,15 @@
+package com.kangaroo.wtcoin.data.source
+
+import com.kangraoo.basektlib.data.DataResult
+import com.kangaroo.wtcoin.data.model.params.*
+import com.kangaroo.wtcoin.data.model.responses.*
+import com.qdedu.baselibcommon.data.model.responses.BasicApiResult
+
+/**
+ * 自动生成：by WaTaNaBe on 2021-06-22 15:12.
+ * AppDataSource
+ */
+interface AppDataSource {
+
+//#06#
+}

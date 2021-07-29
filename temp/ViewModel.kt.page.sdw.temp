@@ -1,0 +1,14 @@
+package com.kangaroo.miaosha.ui.viewmodel
+
+import com.kangraoo.basektlib.ui.mvvm.BViewModel
+/**
+ * 自动生成：by WaTaNaBe on 2021-06-11 15:01
+ * #BP助手#
+ */
+class BpViewModel: BViewModel() {
+
+    override fun onCreate() {
+        super.onCreate()
+    }
+
+}
