@@ -23,7 +23,7 @@
 使用说明：
 
 安装包下载：
-[drawingboard.apk.apk](assets/drawingboard.apk.apk)
+[drawingboard.apk.apk](assets/drawingboard.apk)
 
 登陆后需要等待数据同步完成，才能进行下一步
 
