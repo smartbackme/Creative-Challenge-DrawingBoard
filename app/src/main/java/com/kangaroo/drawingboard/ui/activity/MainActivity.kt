@@ -17,10 +17,14 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jeremyliao.liveeventbus.LiveEventBus
 import com.kangaroo.drawingboard.R
+import com.kangaroo.drawingboard.data.model.User
 import com.kangaroo.drawingboard.data.model.params.TokenPostParams
 import com.kangaroo.drawingboard.data.source.AppRepository
+import com.kangaroo.drawingboard.event.RenEvent
 import com.kangaroo.drawingboard.tools.MqttUtil
 import com.kangaroo.drawingboard.tools.UStore
+import com.kangaroo.drawingboard.tools.toRen
+import com.kangaroo.drawingboard.ui.adapter.LineAdapter
 import com.kangraoo.basektlib.data.DataResult
 import com.kangraoo.basektlib.data.succeeded
 import com.kangraoo.basektlib.tools.encryption.MessageDigestUtils
@@ -52,6 +56,7 @@ class MainActivity : BActivity(){
     override fun getLayoutId() = R.layout.activity_main
 
 
+    private lateinit var adapter: LineAdapter
 
     override fun onViewCreated(savedInstanceState: Bundle?) {
         immersionBar {
@@ -93,7 +98,24 @@ class MainActivity : BActivity(){
             }
 
         }
+        adapter = LineAdapter(UStore.getUserList())
+        var layoutManager = LinearLayoutManager(visitActivity())
+        recycle.layoutManager = layoutManager
+        recycle.adapter = adapter
 
+        LiveEventBus.get<RenEvent>(toRen, RenEvent::class.java).observe(this, Observer {
+            runOnUiThread {
+                var list = UStore.getUserList()
+                ULog.d(list)
+                adapter.setNewInstance(list)
+                adapter.notifyDataSetChanged()
+            }
+        })
+
+        clear.setOnClickListener {
+            draw.reset()
+            MqttUtil.message(MqttUtil.clear,UStore.getUser()!!.name)
+        }
     }
 
     override fun onDestroy() {

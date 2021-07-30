@@ -12,7 +12,7 @@ import kotlinx.android.parcel.Parcelize
  */
 @Parcelize
 @JsonClass(generateAdapter = true)
-data class User(val name:String):Parcelable
+data class User(val name:String,var color:Int):Parcelable
 
 @Parcelize
 @JsonClass(generateAdapter = true)
